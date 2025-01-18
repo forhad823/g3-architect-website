@@ -151,13 +151,53 @@ main > section {
   filter: grayscale(100%);
 }
 
+/*..........feature section related styles start....... */
+.features {
+  gap: 140px;
+}
+#feature-section-title {
+  border-left: 5px solid #ff900e;
+  padding-left: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.feature-card {
+  padding: 30px;
+  box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
+  margin-bottom: 20px;
+}
+.feature-card .feature-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#experience-badge {
+  padding: 45px 42px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  /* position: relative;
+  left: -92px;
+  top: -77px; */
+  /* instead of using css position i can use */
+  margin-left: -92px;
+  margin-top: -77px;
+}
+#experience-year {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
 /* ........responsive media query for header section..... */
 
 @media screen and (max-width: 576px) {
   .navbar,
   .nav-links,
-  .teams {
+  .teams,
+  .features {
     flex-direction: column;
+    align-items: center;
   }
   .team-img-container,
   .facts-container,
@@ -175,10 +215,18 @@ main > section {
     justify-items: center;
     gap: 50px;
   }
+  .featured-architect img {
+    width: 100%;
+  }
+  #experience-badge {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
 }
 /* for medium size devices */
 @media screen and (min-width: 576px) and (max-width: 992px) {
-  .teams {
+  .teams,
+  .features {
     flex-direction: column;
   }
   .our-features {
@@ -189,5 +237,9 @@ main > section {
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     gap: 40px;
+  }
+  #experience-badge {
+    margin-top: 20px;
+    margin-left: 20px;
   }
 }
